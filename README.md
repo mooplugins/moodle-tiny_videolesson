@@ -31,7 +31,7 @@ This plugin enhances the Moodle TinyMCE editor by providing a dedicated button t
 
 ## Requirements
 
-- Moodle 4.1 or higher (adjust if needed)
+- Moodle 4.4.12 or higher (adjust if needed)
 - TinyMCE enabled as the default editor
 - `mod_videolesson` installed
 
