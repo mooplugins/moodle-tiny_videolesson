@@ -67,6 +67,13 @@ Ensure the activity module is installed before using the TinyMCE integration.
 
 ---
 
+## Documentation
+
+For installation, configuration, and usage guides, see:
+https://www.mooplugins.com/docs-category/video-lesson-activity/
+
+---
+
 ## Versioning
 
 Releases follow Moodle versioning conventions.
