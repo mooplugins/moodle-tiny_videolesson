@@ -23,12 +23,14 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+defined('MOODLE_INTERNAL') || die();
+
 $functions = [
     'tiny_videolesson_get_videos' => [
         'classname' => 'tiny_videolesson\external\get_videos',
         'methodname' => 'execute',
         'description' => 'Get Videos',
         'type' => 'read',
-        'ajax' => true
+        'ajax' => true,
     ],
 ];

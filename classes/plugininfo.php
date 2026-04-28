@@ -35,6 +35,15 @@ class plugininfo extends plugin implements
     plugin_with_menuitems,
     plugin_with_configuration {
 
+    /**
+     * Check if the plugin is enabled.
+     *
+     * @param context $context The context.
+     * @param array $options The options.
+     * @param array $fpoptions The filepicker options.
+     * @param \editor_tiny\editor $editor The editor.
+     * @return bool
+     */
     public static function is_enabled(
         context $context,
         array $options,
@@ -45,18 +54,37 @@ class plugininfo extends plugin implements
         return has_capability('tiny/videolesson:addembed', $context);
     }
 
+    /**
+     * Get the available buttons.
+     *
+     * @return array
+     */
     public static function get_available_buttons(): array {
         return [
             'tiny_videolesson/videolesson',
         ];
     }
 
+    /**
+     * Get the available menu items.
+     *
+     * @return array
+     */
     public static function get_available_menuitems(): array {
         return [
             'tiny_videolesson/videolesson',
         ];
     }
 
+    /**
+     * Get the plugin configuration for the context.
+     *
+     * @param context $context The context.
+     * @param array $options The options.
+     * @param array $fpoptions The filepicker options.
+     * @param \editor_tiny\editor $editor The editor.
+     * @return array
+     */
     public static function get_plugin_configuration_for_context(
         context $context,
         array $options,

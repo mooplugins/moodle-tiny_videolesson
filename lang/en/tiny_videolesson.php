@@ -23,9 +23,9 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['helplinktext'] = 'Video Lesson helper';
-$string['modaltitle'] = 'Insert a Video content';
 $string['buttontitle'] = 'Configure Video content';
+$string['helplinktext'] = 'Video Lesson helper';
 $string['insert'] = 'Insert Video';
+$string['modaltitle'] = 'Insert a Video content';
 $string['pluginname'] = 'Tiny insert Video Lesson';
 $string['privacy:metadata'] = 'The Video Lesson plugin for TinyMCE does not store any personal data.';

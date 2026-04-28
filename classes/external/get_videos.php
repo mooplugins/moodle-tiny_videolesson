@@ -31,38 +31,42 @@ use core_external\external_single_structure;
 use core_external\external_value;
 use core_external\external_multiple_structure;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * External function for fetching videos.
-*/
+ *
+ * @package    tiny_videolesson
+ * @author     BitKea Technologies LLP
+ * @copyright  2024 BitKea Technologies LLP (https://www.bitkea.com)
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 class get_videos extends external_api {
 
     /**
      * Define the parameters for the external function.
-    * @return external_function_parameters
-    */
+     *
+     * @return external_function_parameters
+     */
     public static function execute_parameters() {
         return new external_function_parameters([]);
     }
 
     /**
      * The function logic.
-    * @return array
-    */
+     *
+     * @return array
+     */
     public static function execute() {
-        global $CFG;
         $videosource = new \mod_videolesson\videosource();
         $items = $videosource->get_items(null, true);
 
-        // Add placeholder URL to each video item
+        // Add placeholder URL to each video item.
         $placeholder = (new \moodle_url('/mod/videolesson/pix/monologo.svg'))->out(false);
         foreach ($items as $key => $item) {
             $items[$key]['placeholder'] = $placeholder;
         }
 
         return [
-            'list' => $items
+            'list' => $items,
         ];
     }
 
@@ -90,7 +94,7 @@ class get_videos extends external_api {
                     'folderid' => new external_value(PARAM_INT, 'Folder ID', VALUE_OPTIONAL, null),
                     'placeholder' => new external_value(PARAM_URL, 'Placeholder image URL for fallback', VALUE_OPTIONAL, null),
                 ])
-            )
+            ),
         ]);
     }
 
