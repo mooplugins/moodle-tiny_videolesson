@@ -23,7 +23,6 @@
  */
 import {getTinyMCE} from 'editor_tiny/loader';
 import {getPluginMetadata} from 'editor_tiny/utils';
-
 import {component, pluginName} from './common';
 import * as FilterContent from './filtercontent';
 import * as Commands from './commands';

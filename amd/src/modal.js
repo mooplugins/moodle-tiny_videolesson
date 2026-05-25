@@ -23,9 +23,8 @@
  */
 
 import Modal from 'core/modal';
-import ModalRegistry from 'core/modal_registry';
 
-const VideoLessonModal = class extends Modal {
+export default class VideoLessonModal extends Modal {
     static TYPE = 'tiny_videolesson/modal';
 
     static TEMPLATE = 'tiny_videolesson/modal';
@@ -35,8 +34,14 @@ const VideoLessonModal = class extends Modal {
         this.registerCloseOnSave();
         this.registerCloseOnCancel();
     }
-};
 
-ModalRegistry.register(VideoLessonModal.TYPE, VideoLessonModal, VideoLessonModal.TEMPLATE);
+    configure(modalConfig) {
+        modalConfig.large = true;
+        modalConfig.show = true;
+        modalConfig.removeOnClose = true;
 
-export default VideoLessonModal;
+        super.configure(modalConfig);
+    }
+}
+
+VideoLessonModal.registerModalType();

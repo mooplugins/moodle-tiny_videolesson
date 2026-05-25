@@ -28,7 +28,6 @@ import {getPermissions} from './options';
 import {renderForPromise} from 'core/templates';
 import Modal from 'tiny_videolesson/modal';
 import ModalEvents from 'core/modal_events';
-import ModalFactory from 'core/modal_factory';
 import Pending from 'core/pending';
 import Ajax from 'core/ajax';
 import {initTable} from 'mod_videolesson/table';
@@ -139,22 +138,15 @@ const handleDialogueSubmission = async (editor, modal, data) => {
 const displayDialogue = async(editor, data = {}) => {
 
     const templatecontext = await getTemplateContext(editor, data);
-    const modal = await ModalFactory.create({
-        type: Modal.TYPE,
+    const modal = await Modal.create({
         templateContext: templatecontext,
-        large: true,
     });
-
-    modal.show();
 
     const $root = modal.getRoot();
-    initTable('videolist' + templatecontext.tableid, 'videolistsearchinput' + templatecontext.tableid);
-    $root.on(ModalEvents.save, (event, modal) => {
-        handleDialogueSubmission(editor, modal, data);
-    });
 
-    $root.on(ModalEvents.shown, function () {
-        const tbl = modal.getRoot().find('table').get(0);
+    $root.one(ModalEvents.shown, (e, modalInstance) => {
+        initTable('videolist' + templatecontext.tableid, 'videolistsearchinput' + templatecontext.tableid);
+        const tbl = modalInstance.getRoot().find('table').get(0);
         if (!tbl) {
             console.error('Table with id #videolist not found.');
             return;
@@ -177,6 +169,11 @@ const displayDialogue = async(editor, data = {}) => {
                 console.warn('No content hash found for the selected row.');
             }
         });
+    });
+
+    $root.on(ModalEvents.save, (event, modalInstance) => {
+        event.preventDefault();
+        handleDialogueSubmission(editor, modalInstance, data);
     });
 
 };
