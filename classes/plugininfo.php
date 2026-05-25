@@ -32,16 +32,15 @@ use editor_tiny\plugin_with_configuration;
  */
 class plugininfo extends plugin implements
     plugin_with_buttons,
-    plugin_with_menuitems,
-    plugin_with_configuration {
-
+    plugin_with_configuration,
+    plugin_with_menuitems{
     /**
      * Check if the plugin is enabled.
      *
      * @param context $context The context.
      * @param array $options The options.
      * @param array $fpoptions The filepicker options.
-     * @param \editor_tiny\editor $editor The editor.
+     * @param \editor_tiny\editor|null $editor The editor.
      * @return bool
      */
     public static function is_enabled(
@@ -82,7 +81,7 @@ class plugininfo extends plugin implements
      * @param context $context The context.
      * @param array $options The options.
      * @param array $fpoptions The filepicker options.
-     * @param \editor_tiny\editor $editor The editor.
+     * @param \editor_tiny\editor|null $editor The editor.
      * @return array
      */
     public static function get_plugin_configuration_for_context(

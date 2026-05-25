@@ -30,7 +30,7 @@ use core_external\external_function_parameters;
 use core_external\external_single_structure;
 use core_external\external_value;
 use core_external\external_multiple_structure;
-
+use context_system;
 /**
  * External function for fetching videos.
  *
@@ -40,7 +40,6 @@ use core_external\external_multiple_structure;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class get_videos extends external_api {
-
     /**
      * Define the parameters for the external function.
      *
@@ -56,6 +55,12 @@ class get_videos extends external_api {
      * @return array
      */
     public static function execute() {
+        $context = context_system::instance();
+        if (!has_capability('tiny/videolesson:addembed', $context)) {
+            return [
+                'list' => [],
+            ];
+        }
         $videosource = new \mod_videolesson\videosource();
         $items = $videosource->get_items(null, true);
 
@@ -97,5 +102,4 @@ class get_videos extends external_api {
             ),
         ]);
     }
-
 }
