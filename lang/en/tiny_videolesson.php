@@ -29,3 +29,4 @@ $string['insert'] = 'Insert Video';
 $string['modaltitle'] = 'Insert a Video content';
 $string['pluginname'] = 'Tiny insert Video Lesson';
 $string['privacy:metadata'] = 'The Video Lesson plugin for TinyMCE does not store any personal data.';
+$string['videolesson:addembed'] = 'Add embedded Video Lesson';
