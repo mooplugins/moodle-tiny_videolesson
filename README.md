@@ -49,16 +49,6 @@ This plugin enhances the Moodle TinyMCE editor by providing a dedicated button t
 
 ---
 
-## Dependency
-
-This plugin requires:
-
-- `mod_videolesson`
-
-Ensure the activity module is installed before using the TinyMCE integration.
-
----
-
 ## Documentation
 
 For installation, configuration, and usage guides, see:
@@ -66,6 +56,23 @@ https://www.mooplugins.com/docs-category/video-lesson-activity/
 
 ---
 
+## Related plugins
+
+Video Lesson TinyMCE Button is part of the Video Lesson plugin suite for Moodle.
+
+| Plugin                                           | Purpose                                                                                                                     | GitHub                                                            | Moodle plugins directory                                                  |
+| ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| Video Lesson Activity (`mod_videolesson`)        | Required. Provides the main Video Lesson activity, video progress tracking, completion rules, video library, and analytics. | [GitHub](https://github.com/mooplugins/moodle-mod_videolesson)    | [Moodle plugins directory](https://moodle.org/plugins/mod_videolesson)    |
+| Video Lesson Filter (`filter_videolesson`)       | Recommended when inserted Video Lesson content needs to render inside Moodle text areas.                                    | [GitHub](https://github.com/mooplugins/moodle-filter_videolesson) | [Moodle plugins directory](https://moodle.org/plugins/filter_videolesson) |
+| Video Lesson TinyMCE Button (`tiny_videolesson`) | This plugin. Adds a TinyMCE editor button for inserting Video Lesson content.                                               | [GitHub](https://github.com/mooplugins/moodle-tiny_videolesson)   | [Moodle plugins directory](https://moodle.org/plugins/tiny_videolesson)   |
+
+### Recommended installation order
+
+1. Install **Video Lesson Activity** (`mod_videolesson`) first.
+2. Install **Video Lesson Filter** (`filter_videolesson`) if embedded content should render through Moodle text filtering.
+3. Install **Video Lesson TinyMCE Button** (`tiny_videolesson`) to add the editor button.
+
+---
 
 ## Release notes
 
