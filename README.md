@@ -29,23 +29,34 @@ This plugin enhances the Moodle TinyMCE editor by providing a dedicated button t
 
 ## Requirements
 
-- Moodle 4.4.12 or later
-- TinyMCE editor enabled
-- Video Lesson Activity (`mod_videolesson`) installed and configured
-- Video Lesson Filter (`filter_videolesson`) enabled, if embedded Video Lesson content is rendered through Moodle text filtering
-
----
+* Moodle 4.1 or later
+* TinyMCE editor enabled
+* Video Lesson Activity (`mod_videolesson`) installed and configured
+* Video Lesson Filter (`filter_videolesson`) installed and enabled if inserted Video Lesson content is rendered through Moodle text filtering
 
 ## Installation
 
 1. Download the plugin ZIP file or clone this repository.
+
 2. Rename the extracted folder to `videolesson` if needed.
-3. Copy the folder to:  /path/to/moodle/lib/editor/tiny/plugins/videolesson
+
+3. Copy the folder to:
+
+   ```text
+   /path/to/moodle/lib/editor/tiny/plugins/videolesson
+   ```
+
 4. Log in to Moodle as an administrator.
-5. Go to Site administration → Notifications and complete the installation.
-6. Go to Site administration → Plugins → Text editors → Manage editors.
-7. Ensure TinyMCE editor is enabled.
-8. Ensure Video Lesson Activity (mod_videolesson) is installed and configured.
+
+5. Go to **Site administration → Notifications** and complete the installation.
+
+6. Go to **Site administration → Plugins → Text editors → Manage editors**.
+
+7. Ensure **TinyMCE editor** is enabled.
+
+8. Ensure **Video Lesson Activity** (`mod_videolesson`) is installed and configured.
+
+9. Ensure **Video Lesson Filter** (`filter_videolesson`) is enabled if inserted content should render inside Moodle text areas.
 
 ---
 
@@ -75,6 +86,19 @@ Video Lesson TinyMCE Button is part of the Video Lesson plugin suite for Moodle.
 ---
 
 ## Release notes
+
+### Version 1.0.1
+
+Maintenance release with Moodle plugins directory review fixes and documentation updates.
+
+Changes:
+
+- Updated README documentation and related plugin links.
+- Clarified that Video Lesson TinyMCE Button is a companion plugin for `mod_videolesson`.
+- Clarified dependency on `filter_videolesson` for rendering inserted Video Lesson content.
+- Clarified installation requirements and Moodle compatibility.
+- Updated dependency information for Video Lesson Activity and Video Lesson Filter.
+- Included fixes requested during the Moodle plugins directory review process.
 
 ### Version 1.0.0
 
