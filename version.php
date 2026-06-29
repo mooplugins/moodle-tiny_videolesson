@@ -25,11 +25,13 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2026042403;
-$plugin->requires  = 2023041800;
+$plugin->version = 2026061901;
+$plugin->requires = 2022112800;
 $plugin->component = 'tiny_videolesson';
-$plugin->release = '1.0.0';
+$plugin->release = '1.0.1';
 $plugin->maturity = MATURITY_STABLE;
+
 $plugin->dependencies = [
-    'filter_videolesson' => 2026042400,
+'mod_videolesson' => 2026061900,
+'filter_videolesson' => 2026061900,
 ];
