@@ -29,7 +29,7 @@ This plugin enhances the Moodle TinyMCE editor by providing a dedicated button t
 
 ## Requirements
 
-* Moodle 4.1 or later
+* Moodle 4.4.12 or later
 * TinyMCE editor enabled
 * Video Lesson Activity (`mod_videolesson`) installed and configured
 * Video Lesson Filter (`filter_videolesson`) installed and enabled if inserted Video Lesson content is rendered through Moodle text filtering
@@ -86,6 +86,11 @@ Video Lesson TinyMCE Button is part of the Video Lesson plugin suite for Moodle.
 ---
 
 ## Release notes
+
+### Version 1.0.2
+
+- Updated compatibility requirement to Moodle 4.4.12 or later.
+
 
 ### Version 1.0.1
 
