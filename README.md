@@ -63,7 +63,7 @@ This plugin enhances the Moodle TinyMCE editor by providing a dedicated button t
 ## Documentation
 
 For installation, configuration, and usage guides, see:
-https://www.mooplugins.com/docs-category/video-lesson-activity/
+https://www.mooplugins.com/docs-category/video-lesson-activity/?utm_source=github&utm_medium=referral
 
 ---
 
